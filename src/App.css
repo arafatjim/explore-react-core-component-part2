@@ -1,0 +1,322 @@
+@import "tailwindcss";
+@plugin "daisyui";
+#root {
+  max-width: 100%;
+  margin:auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #09002f;
+  color: #282a36;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+.App-title{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+  margin: 4rem 0 0 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+button{
+  margin: 2rem 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2579ef;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #1a5bb8;
+}
+button:active {
+  background-color: #1a5bb8;
+  transform: scale(0.98);
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+.heading-total{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+  margin: 4rem 0 0 0;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 10px;
+  /* background-color: #fff; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto;
+  height: 100%;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #7ccdff;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+}
+.card-users{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 90%;
+  height: 100%;
+  max-width: 400px;
+  margin: 1rem auto;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #7ccdff;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+}
+.users-card-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 0rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(122, 122, 122, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+ 
+}
+.post-card-container{
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  width: 100%;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  /* background-color: #646464; */
+  box-shadow: 0 4px 8px rgba(122, 122, 122, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.post-body{
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #7ccdff;
+}
+.photos-card-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 1rem;
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(122, 122, 122, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 4px solid #646cff;
+}
+.photo-card{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 90%;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #7ccdff;
+}
+.myImage{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.card-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.comment-box{
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #7ccdff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+.comments-container{
+  padding: 2rem;
+  margin: 1rem auto;
+}
+.counter-box{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  gap: 1rem;
+  background-color: #7ccdff;
+}
+.btn-counter{
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1024px) {
+  .post-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card{ 
+    width: 100%;
+    max-width: 100%;
+  }
+  .users-card-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .post-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card{ 
+    width: 100%;
+    max-width: 100%;
+  }
+.users-card-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* .card-posts { 
+    width: 100%;
+    max-width: 100%;
+  } */
+}
+.photos-card-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  /* background-color: #646464; */
+  box-shadow: 0 4px 8px rgba(122, 122, 122, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+@media screen and (max-width: 480px) {
+  .post-card-container {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  .photos-card-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card{
+    width: 100%;
+    max-width: 100%;
+  }
+  .users-card-container{
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  
+}
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
